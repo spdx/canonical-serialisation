@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2022 Sebastian Crane <seabass-labrax@gmx.com>
+
+site_name: SPDX 3.0 Canonical Serialisation
+docs_dir: spec
+theme:
+  name: material
+  features:
+    - navigation.indexes
+markdown_extensions:
+  - footnotes
+nav:
+  - 'Introduction': introduction.md
