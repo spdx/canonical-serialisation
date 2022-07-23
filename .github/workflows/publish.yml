@@ -1,0 +1,44 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2022 Sebastian Crane <seabass-labrax@gmx.com>
+
+name: Publish specification website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build website with MkDocs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Poetry
+        run: sudo apt install -y python3-pip && pip install poetry
+      - name: Install MkDocs plus dependencies
+        run: poetry install
+      - name: Build website with MkDocs
+        run: poetry run mkdocs build
+      - name: Upload built website
+        uses: actions/upload-artifact@v3
+        with:
+          name: spdx-canonical-serialisation-specification-website
+          path: ./site
+
+  publish:
+    name: Publish website to GitHub Pages
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Download built website
+        uses: actions/download-artifact@v3
+        with:
+          name: spdx-canonical-serialisation-specification-website
+          path: ./site
+      - name: Publish website to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
