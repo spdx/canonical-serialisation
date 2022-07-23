@@ -1,0 +1,9 @@
+/*
+SPDX-License-Identifier: Apache-2.0
+SPDX-FileCopyrightText: 2022 Sebastian Crane <seabass-labrax@gmx.com>
+*/
+
+:root {
+    --md-primary-fg-color: #003f6a;
+    --md-accent-fg-color: #4398cc;
+}
