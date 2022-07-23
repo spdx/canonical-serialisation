@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2022 Sebastian Crane <seabass-labrax@gmx.com>
+
+[tool.poetry]
+name = "spdx-canonical-serialisation-specification"
+version = "3.0.0-alpha"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+mkdocs-material = "^8.3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
