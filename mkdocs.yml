@@ -15,3 +15,6 @@ markdown_extensions:
   - footnotes
 nav:
   - 'Introduction': introduction.md
+  - 'Data types':
+    - datatypes/index.md
+    - DateTime: datatypes/datetime.md
