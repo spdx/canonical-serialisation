@@ -230,6 +230,16 @@ SPDX-FileCopyrightText: 2022 Sebastian Crane <seabass-labrax@gmx.com>
 -->
 
 <h1 id="spdx-30-canonical-serialisation">SPDX 3.0 Canonical Serialisation</h1>
+<p>Welcome to the website for the SPDX 3.0 Canonical Serialisation specification!</p>
+<p>SPDX supports many serialisation formats, including JSON, YAML and XML.
+Whilst this feature greatly improves the flexibility of SPDX, it also brings up questions about the integrity of the data: for instance, if an XML file of SPDX data is cryptographically signed, how can that signature be trusted after the data is converted from XML to another format?</p>
+<p>The solution is the SPDX Canonical Serialisation: a representation of SPDX data that is never ambiguous and is unaffected by stylistic or platform-specific concerns.
+By using the Canonical Serialisation, everyone who creates, receives or processes SPDX data can verify the integrity of its individual, constituent SPDX Elements regardless of the serialisation format originally used.</p>
+<p>This is currently a <strong>draft</strong>, so parts may be incomplete or change substantially without notice.
+Although this website expresses aspects of the specification as they are agreed on by the SPDX Canonicalisation Committee, it shouldn't be considered an official SPDX standard until reasonable consensus has been obtained on the final draft as a whole.
+Please see <a href="https://github.com/spdx/governance/blob/main/5._Governance.md#5-specification-development-process">section 5 of the SPDX Governance</a> for more details.</p>
+<p>If you would like to contribute to the development of this specification, please introduce yourself on the <a href="https://lists.spdx.org/g/spdx-tech">SPDX Technical Team mailing list</a>.
+You are welcome to join the <a href="https://github.com/spdx/meetings#canonicalisation-committee-meetings">weekly Canonicalisation Committee meeting</a>!</p>
 
               
             </article>
